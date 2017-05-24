@@ -8,5 +8,5 @@ public class Ex1_1
 		System.out.println(line1 + line2);
 		System.out.print(line1);
 		System.out.print(line2);
-	}// gkutgoawer
+	}
 }

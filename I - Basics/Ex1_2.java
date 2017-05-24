@@ -13,5 +13,4 @@ public class Ex1_2
 		System.out.println("The sum of the numbers is : " + sum);
 		System.out.println("The product of the numbers is : " + product);
 	}
-
 }

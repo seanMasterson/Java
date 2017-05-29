@@ -1,13 +1,18 @@
 public class Furniture 
 {
-	private String colour;
+	private Colours colour;
 	private String materialType;
 	
-	public String getColour() 
+	protected enum Colours
+	{
+		RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
+	};
+	
+	public Colours getColour() 
 	{
 		return colour;
 	}
-	public void setColour(String colour)
+	public void setColour(Colours colour)
 	{
 		this.colour = colour;
 	}
@@ -37,7 +42,7 @@ public class Furniture
 		
 	}
 	
-	public Furniture(String colour, String materialType) 
+	public Furniture(Colours colour, String materialType) 
 	{
 		this();
 		this.colour = colour;
@@ -47,6 +52,6 @@ public class Furniture
 	@Override
 	public String toString() 
 	{
-		return "Furniture Item [Colour: " + colour + ", Material: " + getMaterialType() + "]";
+		return "Furniture Item [Colour: " + getColour() + ", Material: " + getMaterialType() + "]";
 	}
 }

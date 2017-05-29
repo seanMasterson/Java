@@ -12,6 +12,7 @@ public class Ex10_1
 		for(Shape shape : shapeArray) 
 		{
 			System.out.println(shape.toString());
+			System.out.println();
 		}
 	}
 }

@@ -1,7 +1,10 @@
+import java.time.LocalDate;
+
 public abstract class Employee 
 {
 	private String firstName;
 	private String lastName;
+	private LocalDate dob;
 	
 	public String getFirstName() 
 	{
@@ -21,6 +24,15 @@ public abstract class Employee
 		this.lastName = lastName;
 	}
 	
+	public LocalDate getDOB() 
+	{
+		return dob;
+	}
+	public void setDOB(LocalDate dob) 
+	{
+		this.dob = dob;
+	}
+	
 	public abstract double getEarnings();
 	
 	public Employee() 
@@ -28,16 +40,17 @@ public abstract class Employee
 		
 	}
 	
-	public Employee(String firstName, String lastName) 
+	public Employee(String firstName, String lastName, LocalDate dob) 
 	{
 		this();
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.dob = dob;
 	}
 
 	@Override
 	public String toString() 
 	{
-		return "First Name: " + getFirstName() + ", Last Name: " + getLastName();
+		return "First Name: " + getFirstName() + ", Last Name: " + getLastName() + ", Date Of Birth: " + getDOB();
 	}
 }

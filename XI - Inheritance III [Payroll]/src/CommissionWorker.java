@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class CommissionWorker extends Employee
 {
 	private double salary;
@@ -43,9 +45,9 @@ public class CommissionWorker extends Employee
 		
 	}
 	
-	public CommissionWorker(String firstName, String lastName, double salary, double commission, int quantity)
+	public CommissionWorker(String firstName, String lastName, LocalDate dob, double salary, double commission, int quantity)
 	{
-		super(firstName, lastName);
+		super(firstName, lastName, dob);
 		setSalary(salary);
 		setCommission(commission);
 		setQuantity(quantity);

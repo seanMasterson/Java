@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Boss extends Employee
 {
 	private double salary;
@@ -22,9 +24,9 @@ public class Boss extends Employee
 		
 	}
 	
-	public Boss(String firstName, String lastName, double salary) 
+	public Boss(String firstName, String lastName, LocalDate dob, double salary) 
 	{
-		super(firstName, lastName);
+		super(firstName, lastName, dob);
 		setSalary(salary);
 	}
 	

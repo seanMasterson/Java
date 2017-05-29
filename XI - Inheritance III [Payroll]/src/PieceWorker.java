@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class PieceWorker extends Employee
 {
 	private int quantity;
@@ -32,9 +34,9 @@ public class PieceWorker extends Employee
 		
 	}
 	
-	public PieceWorker(String firstName, String lastName, int quantity, double wagePerPiece) 
+	public PieceWorker(String firstName, String lastName, LocalDate dob, int quantity, double wagePerPiece) 
 	{
-		super(firstName, lastName);
+		super(firstName, lastName, dob);
 		setQuantity(quantity);
 		setWagePerPiece(wagePerPiece);
 	}

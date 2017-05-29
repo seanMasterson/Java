@@ -34,6 +34,7 @@ public class CommissionWorker extends Employee
 	@Override
 	public double getEarnings() 
 	{
+		salary = commission * quantity;
 		return salary;
 	}
 	
@@ -44,6 +45,7 @@ public class CommissionWorker extends Employee
 	
 	public CommissionWorker(String firstName, String lastName, double salary, double commission, int quantity)
 	{
+		super(firstName, lastName);
 		setSalary(salary);
 		setCommission(commission);
 		setQuantity(quantity);
@@ -52,6 +54,6 @@ public class CommissionWorker extends Employee
 	@Override
 	public String toString() 
 	{	
-		return super.toString();
+		return super.toString() + ", Salary: " + String.format("%.2f", getEarnings()) + ", Commission: " + String.format("%.2f", getCommission()) + ", Quantity: " + getQuantity();
 	}
 }

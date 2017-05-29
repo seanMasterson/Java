@@ -38,6 +38,6 @@ public abstract class Employee
 	@Override
 	public String toString() 
 	{
-		return "First Name: , " + getFirstName() + "Last Name: " + getLastName();
+		return "First Name: " + getFirstName() + ", Last Name: " + getLastName();
 	}
 }

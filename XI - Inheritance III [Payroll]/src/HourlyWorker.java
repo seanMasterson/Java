@@ -24,7 +24,7 @@ public class HourlyWorker extends Employee
 	@Override
 	public double getEarnings()
 	{
-		return 0;
+		return wage;
 	}
 	
 	public HourlyWorker() 
@@ -34,13 +34,15 @@ public class HourlyWorker extends Employee
 	
 	public HourlyWorker(String firstName, String lastName, double wage, int hoursWorked) 
 	{
-		
+		super(firstName, lastName);
+		setWage(wage);
+		setHoursWorked(hoursWorked);
 	}
 	
 	@Override
 	public String toString()
 	{
-		return super.toString();
+		return super.toString() + ", Wage: " + String.format("%.2f", getEarnings()) + ", Hours Worked: " + getHoursWorked();
 	}
 }
 

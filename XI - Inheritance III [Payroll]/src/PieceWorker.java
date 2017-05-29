@@ -24,7 +24,7 @@ public class PieceWorker extends Employee
 	@Override
 	public double getEarnings() 
 	{	
-		return 0;
+		return wagePerPiece;
 	}
 	
 	public PieceWorker() 
@@ -34,12 +34,14 @@ public class PieceWorker extends Employee
 	
 	public PieceWorker(String firstName, String lastName, int quantity, double wagePerPiece) 
 	{
-	
+		super(firstName, lastName);
+		setQuantity(quantity);
+		setWagePerPiece(wagePerPiece);
 	}
 	
 	@Override
 	public String toString() 
 	{
-		return super.toString();
+		return super.toString() + ", Wage Per Piece: " + String.format("%.2f", getEarnings()) + ", Quantity: " + getQuantity();
 	}
 }

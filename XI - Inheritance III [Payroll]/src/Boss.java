@@ -24,13 +24,13 @@ public class Boss extends Employee
 	
 	public Boss(String firstName, String lastName, double salary) 
 	{
-		super();
+		super(firstName, lastName);
 		setSalary(salary);
 	}
 	
 	@Override
 	public String toString()
 	{
-		return super.toString();
+		return super.toString() + ", Salary: " + String.format("%.2f", getEarnings());
 	}
 }

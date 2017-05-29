@@ -92,7 +92,7 @@ public class BankAccount
 		return balance;
 	}
 	
-	public BankAccount() 
+	private BankAccount() 
 	{
 		count = accounts++ + 1;
 		accountNum = numAccount++;

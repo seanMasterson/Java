@@ -1,11 +1,11 @@
 public class Furniture 
 {
 	private Colours colour;
-	private String materialType;
+	private MaterialType materialType;
 	
 	protected enum Colours
 	{
-		RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
+		BEIGE, ORANGE, YELLOW, GREEN, BLUE, BROWN, WHITE
 	};
 	
 	public Colours getColour() 
@@ -17,24 +17,13 @@ public class Furniture
 		this.colour = colour;
 	}
 	
-	public String getMaterialType() 
+	public MaterialType getMaterialType() 
 	{
 		return materialType;
 	}
-	public void setMaterialType(String materialType) 
+	public void setMaterialType(MaterialType materialType) 
 	{
-		switch(materialType) 
-		{
-			case "Wood":
-			case "Plastic":
-			case "Stone":
-			case "Aluminium":
-				this.materialType = materialType;
-				break;
-			default:
-				System.out.println("Wood");
-				this.materialType = "Wood";
-		}
+		this.materialType = materialType;
 	}
 	
 	public Furniture() 
@@ -42,7 +31,7 @@ public class Furniture
 		
 	}
 	
-	public Furniture(Colours colour, String materialType) 
+	public Furniture(Colours colour, MaterialType materialType) 
 	{
 		this();
 		this.colour = colour;
@@ -52,6 +41,6 @@ public class Furniture
 	@Override
 	public String toString() 
 	{
-		return "Furniture Item [Colour: " + getColour() + ", Material: " + getMaterialType() + "]";
+		return "Furniture Item [Colour: " + colour.toString().toLowerCase() + ", Material: " + materialType.toString().toLowerCase() + "]";
 	}
 }

@@ -1,16 +1,13 @@
 public class Table extends Furniture
 {
-	private boolean isExpandable;
+	private IsExpandable isExpandable;
 	private String shape;
 	
-	public String getIsExpandable() 
+	public IsExpandable getIsExpandable() 
 	{
-		if(isExpandable == true)
-			return "Yes";
-		else
-			return "No";
+			return isExpandable;
 	}
-	public void setExpandable(boolean isExpandable) 
+	public void setExpandable(IsExpandable isExpandable) 
 	{		
 		this.isExpandable = isExpandable;
 	}
@@ -29,7 +26,7 @@ public class Table extends Furniture
 		
 	}
 	
-	public Table(String colour, String materialType, String shape, boolean isExpandable) 
+	public Table(String colour, String materialType, String shape, IsExpandable isExpandable) 
 	{
 		super();
 		this.shape = shape;

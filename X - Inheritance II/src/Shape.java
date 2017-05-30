@@ -9,18 +9,8 @@ public class Shape
 	
 	public enum Colours 
 	{
-		RED,
-		GREEN,
-		BLUE,
-		YELLOW,
-		BLACK,
-		PINK,
-		ORANGE,
-		PURPLE,
-		GREY,
-		WHITE;
-		/*private static final List COLOURS = Collections.unmodifiableList(Arrays.asList(values()));
-		private static final Random RAND = new Random();*/
+		RED, GREEN, BLUE, YELLOW, BLACK,
+		PINK, ORANGE, PURPLE, GREY, WHITE;
 	};
 	
 	public Colours getColour() 

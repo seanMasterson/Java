@@ -1,6 +1,6 @@
 public class Pizza 
 {
-	private String[] toppings = {"Pepperoni","Anchoives","Parmesan","Olives","Capers"};
+	private String[] toppings = new String[5];
 	private String readTopping;
 	private double price;
 	private PizzaSize pizzaSize;
@@ -51,7 +51,11 @@ public class Pizza
 	}
 	public void setReadTopping() 
 	{
-		switch(readTopping) 
+		for(int i = 0; i < toppings.length; i++) 
+		{
+			
+		}
+		/*switch(readTopping) 
 		{
 		case "Pepperoni":
 			this.readTopping = toppings[0];
@@ -70,9 +74,9 @@ public class Pizza
 			break;
 		default:
 			System.out.println("Invalid topping. Reset to Pepperoni.");
-			this.readTopping = readTopping;
+			this.readTopping = toppings[0];
 			break;
-		}	
+		}	*/
 	}
 	
 	public double calculatePrice()
@@ -116,7 +120,7 @@ public class Pizza
 		
 	}
 	
-	public Pizza(String readTopping, double price, PizzaSize pizzaSize) 
+	public Pizza(String readTopping, PizzaSize pizzaSize) 
 	{
 		this();
 		setReadTopping();
@@ -127,6 +131,6 @@ public class Pizza
 	@Override
 	public String toString() 
 	{
-		return "Your Pizza [Size: " + getPizzaSize(pizzaSize) + ", Toppings: " + getReadTopping(readTopping) +", Price: ]";
+		return "Your Pizza [Size: " + getPizzaSize(pizzaSize) + ", Toppings: " + getReadTopping(readTopping) +", Price: " + calculatePrice() + "]";
 	}
 }

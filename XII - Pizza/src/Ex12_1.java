@@ -12,5 +12,16 @@ public class Ex12_1
 		{
 			System.out.println(c.toString());
 		}
+		
+		Pizza p0 = new Pizza("Anchovies", Pizza.PizzaSize.MEDIUM);
+		Pizza p1 = new Pizza("Parmesan", Pizza.PizzaSize.SMALL);
+		Pizza p2 = new Pizza("Pesto", Pizza.PizzaSize.EXTRA_LARGE);
+		
+		Pizza[] pizzas = {p0, p1, p2};
+		
+		for(Pizza p : pizzas) 
+		{
+			System.out.println(p.toString());
+		}
 	}
 }

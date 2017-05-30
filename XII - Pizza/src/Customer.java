@@ -52,7 +52,7 @@ public class Customer
 		
 	}
 	
-	public Customer(String name, String address, String phone, Pizza[] pizzas) 
+	public Customer(String name, String address, String phone/*, Pizza[] pizzas*/) 
 	{
 		this.name = name;
 		this.address = address;
@@ -62,6 +62,6 @@ public class Customer
 	@Override
 	public String toString() 
 	{
-		return "";
+		return "Name: " + name + "Address: " + address + ", Phone: " + phone + "\n";
 	}
 }

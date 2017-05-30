@@ -1,16 +1,13 @@
 public class Bed extends Furniture	
 {
-	private boolean hasHeadBoard;
+	private HasHeadboard hasHeadBoard;
 	private String size;
 
-	public String getHasHeadBoard() 
+	public HasHeadboard getHasHeadBoard() 
 	{
-		if(hasHeadBoard == true)
-			return "Yes";
-		else
-			return "No";		
+		return hasHeadBoard;		
 	}
-	public void setHasHeadBoard(boolean hasHeadBoard)
+	public void setHasHeadBoard(HasHeadboard hasHeadBoard)
 	{
 		this.hasHeadBoard = hasHeadBoard;
 	}
@@ -30,7 +27,7 @@ public class Bed extends Furniture
 		
 	}
 	
-	public Bed(String colour, String materialType, String size, boolean hasHeadBoard) 
+	public Bed(String colour, String materialType, String size, HasHeadboard hasHeadBoard) 
 	{
 		super();
 		this.size = size;

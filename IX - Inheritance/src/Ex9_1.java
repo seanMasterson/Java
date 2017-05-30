@@ -12,13 +12,13 @@ public class Ex9_1
 		b0.setColour(Furniture.Colours.BROWN);
 		b0.setMaterialType(MaterialType.PINE);
 		b0.setSize("Rectangular");
-		b0.setHasHeadBoard(false);
+		b0.setHasHeadBoard(HasHeadboard.NO);
 		
 		Chair c0 = new Chair();
 		c0.setColour(Furniture.Colours.BEIGE);
 		c0.setMaterialType(MaterialType.MAHOGANY);
 		c0.setType("High Top");
-		c0.setHasGasLift(false);
+		c0.setHasGasLift(HasGasLift.NO);
 		
 		Furniture[] f0 = {t0, b0, c0}; // Polymorphism
 		

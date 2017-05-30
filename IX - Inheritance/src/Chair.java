@@ -1,16 +1,13 @@
 public class Chair extends Furniture
 {
-	private boolean hasGasLift;
+	private HasGasLift hasGasLift;
 	private String type;
 	
-	public String getHasGasLift() 
-	{
-		if(hasGasLift == true)
-			return "Yes";
-		else
-			return "No";
+	public HasGasLift getHasGasLift() 
+	{	
+		return hasGasLift;
 	}
-	public void setHasGasLift(boolean hasGasLift) 
+	public void setHasGasLift(HasGasLift hasGasLift) 
 	{
 		this.hasGasLift = hasGasLift;
 	}
@@ -30,7 +27,7 @@ public class Chair extends Furniture
 		
 	}
 
-	public Chair(String colour, String materialType, String type, boolean hasGasLift) 
+	public Chair(String colour, String materialType, String type,HasGasLift hasGasLift) 
 	{
 		super();
 		this.type = type;

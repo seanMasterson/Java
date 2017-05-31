@@ -1,8 +1,3 @@
-/*import java.util.Random;
-import java.util.Arrays;
-import java.util.Collections;
-import java.awt.List;
-*/
 public class Shape 
 {
 	private Colours colour;

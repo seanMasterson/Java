@@ -44,6 +44,10 @@ public class Customer
 	
 	public double getTotalCost() 
 	{
+		for(Pizza p : pizzas) 
+		{
+			totalCost += p.calculatePrice();
+		}
 		return totalCost;
 	}
 	
@@ -52,11 +56,12 @@ public class Customer
 		
 	}
 	
-	public Customer(String name, String address, String phone/*, Pizza[] pizzas*/) 
+	public Customer(String name, String address, String phone, Pizza[] pizzas) 
 	{
 		this.name = name;
 		this.address = address;
 		this.phone = phone;
+		setPizzas(pizzas);
 	}
 	
 	@Override

@@ -5,6 +5,8 @@ public class Pizza
 	private String[] toppings;
 	private double price;
 	private PizzaSize pizzaSize;
+	private static int pizzaCounter = 1;
+	private int count;
 	
 	private static final double PRICE_SMALL = 8d;
 	private static final double PRICE_MEDIUM = 10d;
@@ -84,7 +86,7 @@ public class Pizza
 	
 	public Pizza() 
 	{
-		
+		count = pizzaCounter++;
 	}
 	
 	public Pizza(String[] toppings, PizzaSize pizzaSize) 
@@ -98,7 +100,7 @@ public class Pizza
 	@Override
 	public String toString() 
 	{
-		return "Your Pizza [Size: " + getPizzaSize().toString() +
+		return "Pizza " + count + " [Size: " + getPizzaSize().toString() +
 				", Toppings: " + Arrays.toString(toppings) + 
 				String.format(", Price: \u20ac%.2f", calculatePrice()) + "]\n";
 	}

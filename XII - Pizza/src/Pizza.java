@@ -1,7 +1,8 @@
+import java.util.Arrays;
+
 public class Pizza 
 {
-	private String[] toppings = new String[5];
-	private String readTopping;
+	private String[] toppings;
 	private double price;
 	private PizzaSize pizzaSize;
 	
@@ -12,9 +13,8 @@ public class Pizza
 			
 	private static final double PRICE_TOPPING_ONE = 1d;
 	private static final double PRICE_TOPPING_TWO = 1.20;
-	private static final double PRICE_TOPPING_THREE = 1.80;
-	private static final double PRICE_TOPPING_FOUR = 1.50;
-	private static final double PRICE_TOPPING_FIVE = 1.30;
+	private static final double PRICE_TOPPING_THREE = 1.50;
+	private static final double PRICE_TOPPING_FOUR = 1.80;
 	
 	public enum PizzaSize 
 	{
@@ -36,47 +36,22 @@ public class Pizza
 		}
 	};
 		
-	public PizzaSize getPizzaSize(PizzaSize pizzaSize) 
+	public PizzaSize getPizzaSize() 
 	{
 		return pizzaSize;
 	}
-	public void setPizzaSize() 
+	public void setPizzaSize(PizzaSize pizzaSize) 
 	{
 		this.pizzaSize = pizzaSize;
 	}
 	
-	public String getReadTopping(String readTopping) 
+	public String[] getToppings() 
 	{
-		return readTopping;
+		return toppings;
 	}
-	public void setReadTopping() 
+	public void setToppings(String[] toppings) 
 	{
-		for(int i = 0; i < toppings.length; i++) 
-		{
-			
-		}
-		/*switch(readTopping) 
-		{
-		case "Pepperoni":
-			this.readTopping = toppings[0];
-			break;
-		case "Anchovies":
-			this.readTopping = toppings[1];
-			break;
-		case "Parmesan":
-			this.readTopping = toppings[2];
-			break;
-		case "Olives":
-			this.readTopping = toppings[3];
-			break;
-		case "Capers":
-			this.readTopping = toppings[4];
-			break;
-		default:
-			System.out.println("Invalid topping. Reset to Pepperoni.");
-			this.readTopping = toppings[0];
-			break;
-		}	*/
+		this.toppings = toppings;
 	}
 	
 	public double calculatePrice()
@@ -84,16 +59,20 @@ public class Pizza
 		switch(pizzaSize) 
 		{
 			case SMALL:
-				this.price = PRICE_SMALL;
+				this.price = PRICE_SMALL; 
+				price += PRICE_TOPPING_ONE;
 				break;
 			case MEDIUM:
 				this.price = PRICE_MEDIUM;
+				price += PRICE_TOPPING_TWO;
 				break;
 			case LARGE:
-				this.price = PRICE_LARGE;
+				this.price = PRICE_LARGE; 
+				price += PRICE_TOPPING_THREE;
 				break;
 			case EXTRA_LARGE:
-				this.price = PRICE_EXTRA_LARGE;
+				this.price = PRICE_EXTRA_LARGE; 
+				price += PRICE_TOPPING_FOUR;
 				break;
 			default:
 				System.out.println("Invalid Pizza Size. Reset to Medium Size.");
@@ -101,16 +80,14 @@ public class Pizza
 				break;
 		}
 		
-		if(readTopping == toppings[0])
-			price += PRICE_TOPPING_ONE;
+		/*if(readTopping == toppings[0])
+			price ;
 		else if(readTopping == toppings[1])
-			price += PRICE_TOPPING_TWO;
+			price ;
 		else if(readTopping == toppings[2])
-			price += PRICE_TOPPING_THREE;
+			price ;
 		else if(readTopping == toppings[3])
-			price += PRICE_TOPPING_FOUR;
-		else if(readTopping == toppings[4])
-			price += PRICE_TOPPING_FIVE;
+			price ;*/
 			
 		return price;
 	}
@@ -120,17 +97,48 @@ public class Pizza
 		
 	}
 	
-	public Pizza(String readTopping, PizzaSize pizzaSize) 
+	public Pizza(String[] toppings, PizzaSize pizzaSize) 
 	{
 		this();
-		setReadTopping();
-		calculatePrice();
-		setPizzaSize();
+		setToppings(toppings);
+		setPizzaSize(pizzaSize);
+		//calculatePrice();	
 	}
 	
 	@Override
 	public String toString() 
 	{
-		return "Your Pizza [Size: " + getPizzaSize(pizzaSize) + ", Toppings: " + getReadTopping(readTopping) +", Price: " + calculatePrice() + "]";
+		return "Your Pizza [Size: " + getPizzaSize().toString() +
+				", Toppings: " + Arrays.toString(toppings) + String.format(", Price: \u20ac%.2f", calculatePrice()) + "]\n";
 	}
 }
+
+// For setToppings()...
+
+/*
+for(int i = 0; i < toppings.length; i++) 
+{
+	
+}
+switch(readTopping) 
+{
+case "Pepperoni":
+	this.readTopping = toppings[0];
+	break;
+case "Anchovies":
+	this.readTopping = toppings[1];
+	break;
+case "Parmesan":
+	this.readTopping = toppings[2];
+	break;
+case "Olives":
+	this.readTopping = toppings[3];
+	break;
+case "Capers":
+	this.readTopping = toppings[4];
+	break;
+default:
+	System.out.println("Invalid topping. Reset to Pepperoni.");
+	this.readTopping = toppings[0];
+	break;
+}	*/

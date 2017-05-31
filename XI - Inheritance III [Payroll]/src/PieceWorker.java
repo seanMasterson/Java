@@ -44,6 +44,8 @@ public class PieceWorker extends Employee
 	@Override
 	public String toString() 
 	{
-		return super.toString() + ", Wage Per Piece: " + String.format("%.2f", getEarnings()) + ", Quantity: " + getQuantity();
+		return "Piece Worker: [" +  super.toString() + 
+				", Wage Per Piece: " + String.format("%.2f", getEarnings()) + 
+				", Quantity: " + getQuantity() + "]";
 	}
 }

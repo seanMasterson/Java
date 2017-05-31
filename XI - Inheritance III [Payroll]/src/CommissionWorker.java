@@ -56,6 +56,8 @@ public class CommissionWorker extends Employee
 	@Override
 	public String toString() 
 	{	
-		return super.toString() + ", Salary: " + String.format("%.2f", getEarnings()) + ", Commission: " + String.format("%.2f", getCommission()) + ", Quantity: " + getQuantity();
+		return "Commission Worker: [" + super.toString() + ", Salary: " + 
+				String.format("%.2f", getEarnings()) + ", Commission: " + 
+				String.format("%.2f", getCommission()) + ", Quantity: " + getQuantity() + "]";
 	}
 }

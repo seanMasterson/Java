@@ -33,6 +33,6 @@ public class Boss extends Employee
 	@Override
 	public String toString()
 	{
-		return super.toString() + ", Salary: " + String.format("%.2f", getEarnings());
+		return "Boss: [" +   super.toString() + ", Salary: " + String.format("%.2f", getEarnings()) + "]";
 	}
 }

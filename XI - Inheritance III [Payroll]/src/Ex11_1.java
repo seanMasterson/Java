@@ -15,6 +15,11 @@ public class Ex11_1
 		{
 			System.out.println(e.toString());
 			System.out.println();
+			
+			if(e instanceof Boss) 
+			{
+				System.out.println("Boss Salary: " + String.format("%.2f", ((Boss)e).getSalary()) + "\n");
+			}
 		}
 	}
 }

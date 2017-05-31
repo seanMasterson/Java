@@ -35,6 +35,7 @@ public class Customer
 	
 	public Pizza[] getPizzas() 
 	{
+		//sss
 		return pizzas;
 	}
 	public void setPizzas(Pizza[] pizzas) 

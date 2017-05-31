@@ -8,69 +8,72 @@ public abstract class Pet
 	
 	public enum IsFemale {YES, NO};
 	
-	public String getName(String name) 
+	public String getName() 
 	{
 		return name;
 	}
-	public void setName() 
+	public void setName(String name) 
 	{
 		this.name = name;
 	}
 	
-	public String getBreed(String breed) 
+	public String getBreed() 
 	{
 		return breed;
 	}
-	public void setBreed() 
+	public void setBreed(String breed) 
 	{
 		this.breed = breed;
 	}
 	
-	public int getAge(int age) 
+	public int getAge() 
 	{
 		return age;
 	}
-	public void setAge() 
+	public void setAge(int age) 
 	{
 		this.age = age;
 	}
 	
-	public String getColour(String colour) 
+	public String getColour() 
 	{
 		return colour;
 	}
-	public void setColour() 
+	public void setColour(String colour) 
 	{
 		this.colour = colour;
 	}
 	
-	public IsFemale getIsFemale(IsFemale isFemale) 
+	public IsFemale getIsFemale() 
 	{
 		return isFemale;
 	}
-	public void setIsFemale() 
+	public void setIsFemale(IsFemale isFemale) 
 	{
 		this.isFemale = isFemale;
 	}
 	
-	public abstract void getTypeOfAnimal();
+	public abstract String getTypeOfAnimal();
 	
 	public Pet() 
 	{
 		
 	}
 	
-	public Pet(String name, String breed, int age, String colour) 
+	public Pet(String name, String breed, int age, String colour, IsFemale isFemale) 
 	{
 		this();
 		this.name = name;
 		this.breed = breed;
 		this.age = age;
+		this.colour = colour;
+		setIsFemale(isFemale);
 	}
 	
 	@Override
 	public String toString() 
 	{
-		return "Pet[Name: " + getName(name) +  ", Breed: " + getBreed(breed) + ", Age: " + getAge(age) +  ", Colour:]";
+		return "Pet [Name: " + getName() +  ", Breed: " + getBreed() + 
+			   ", Age: " + getAge() +  ", Colour: ";
 	}
 }

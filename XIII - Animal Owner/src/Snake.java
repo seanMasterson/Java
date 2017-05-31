@@ -1,9 +1,9 @@
 public class Snake extends Pet
 {
 	@Override
-	public void getTypeOfAnimal() 
+	public String getTypeOfAnimal() 
 	{
-		System.out.println("Animal Type: Snake");
+		return ", Animal Type: Snake";
 	}
 	
 	public Snake() 
@@ -11,7 +11,7 @@ public class Snake extends Pet
 		
 	}
 	
-	public Snake(String name, String breed, int age, boolean isFemale) 
+	public Snake(String name, String breed, int age, IsFemale isFemale) 
 	{
 		super();
 	}
@@ -19,6 +19,6 @@ public class Snake extends Pet
 	@Override
 	public String toString() 
 	{
-		return super.toString();
+		return super.toString() + getTypeOfAnimal();
 	}
 }

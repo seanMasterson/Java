@@ -1,12 +1,26 @@
 public class Dog extends Pet implements Mammal
 {
-	private String microChipNumber;
-	private boolean isMicroChipped;
+	public enum IsMicroChipped 
+	{
+		YES, NO;
+		
+		private int microChipNumber;
+		
+		private IsMicroChipped() 
+		{
+			this.microChipNumber = microChipNumber;
+		}
+		
+		int getMicroChipNumber() 
+		{
+			return microChipNumber;
+		}
+	};
 	
 	@Override
-	public void getTypeOfAnimal() 
+	public String getTypeOfAnimal() 
 	{
-		System.out.println("Animal Type: Dog");
+		return ", Animal Type: Dog";
 	}
 	
 	@Override
@@ -26,14 +40,15 @@ public class Dog extends Pet implements Mammal
 		
 	}
 	
-	public Dog(String name, String breed, int age, IsFemale isFemale) 
+	public Dog(String name, String breed, int age, String colour, IsFemale isFemale/*, IsMicroChipped isMicroChipped*/) 
 	{
 		super();
+		
 	}
 	
 	@Override
 	public String toString() 
 	{
-		return super.toString();
+		return super.toString() + getTypeOfAnimal();
 	}
 }

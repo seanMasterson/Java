@@ -1,9 +1,9 @@
 public class Hamster extends Pet implements Mammal
 {
 	@Override
-	public void getTypeOfAnimal() 
+	public String getTypeOfAnimal() 
 	{
-		System.out.println("Animal Type: Hamster");
+		return ", Animal Type: Hamster";
 	}
 	
 	@Override
@@ -23,7 +23,7 @@ public class Hamster extends Pet implements Mammal
 		
 	}
 	
-	public Hamster(String name, String breed, int age, boolean isFemale) 
+	public Hamster(String name, String breed, int age, IsFemale isFemale) 
 	{
 		super();
 	}
@@ -31,6 +31,6 @@ public class Hamster extends Pet implements Mammal
 	@Override
 	public String toString() 
 	{
-		return super.toString();
+		return super.toString() + getTypeOfAnimal();
 	}
 }

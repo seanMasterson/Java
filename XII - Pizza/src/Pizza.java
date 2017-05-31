@@ -99,6 +99,7 @@ public class Pizza
 	public String toString() 
 	{
 		return "Your Pizza [Size: " + getPizzaSize().toString() +
-				", Toppings: " + Arrays.toString(toppings) + String.format(", Price: \u20ac%.2f", calculatePrice()) + "]\n";
+				", Toppings: " + Arrays.toString(toppings) + 
+				String.format(", Price: \u20ac%.2f", calculatePrice()) + "]\n";
 	}
 }

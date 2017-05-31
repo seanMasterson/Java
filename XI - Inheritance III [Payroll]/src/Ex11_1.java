@@ -6,7 +6,7 @@ public class Ex11_1
 	{
 		Boss b0 = new Boss("Death Spell","Omega", LocalDate.parse("1992-10-05"), 13.49);
 		CommissionWorker c0 = new CommissionWorker("Para","Celsus", LocalDate.parse("1995-06-20"), 30.55, 12.56, 5);
-		HourlyWorker h0 = new HourlyWorker("Luc","Lemay", LocalDate.parse("1876-08-11"), 134.70, 4);
+		HourlyWorker h0 = new HourlyWorker("Luc","Lemay", LocalDate.parse("1876-08-11"), 45.50, 4);
 		PieceWorker p0 = new PieceWorker("Scott","Clendenin", LocalDate.parse("1990-12-15"), 3, 4.6);
 		
 		Employee[] employees = {b0, c0, h0, p0};

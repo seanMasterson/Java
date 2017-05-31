@@ -26,6 +26,7 @@ public class HourlyWorker extends Employee
 	@Override
 	public double getEarnings()
 	{
+		wage *= hoursWorked;
 		return wage;
 	}
 	
@@ -44,7 +45,7 @@ public class HourlyWorker extends Employee
 	@Override
 	public String toString()
 	{
-		return "Hourly Worker: [" + super.toString() + ", Wage: " + 
+		return "Hourly Worker: [" + super.toString() + String.format(", Wage: %.2f", wage) + ", Earnings: " + 
 		String.format("%.2f", getEarnings()) + ", Hours Worked: " + getHoursWorked() + "]";
 	}
 }

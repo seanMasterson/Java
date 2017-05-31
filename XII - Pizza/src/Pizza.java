@@ -79,16 +79,6 @@ public class Pizza
 				this.price = PRICE_MEDIUM;
 				break;
 		}
-		
-		/*if(readTopping == toppings[0])
-			price ;
-		else if(readTopping == toppings[1])
-			price ;
-		else if(readTopping == toppings[2])
-			price ;
-		else if(readTopping == toppings[3])
-			price ;*/
-			
 		return price;
 	}
 	
@@ -112,33 +102,3 @@ public class Pizza
 				", Toppings: " + Arrays.toString(toppings) + String.format(", Price: \u20ac%.2f", calculatePrice()) + "]\n";
 	}
 }
-
-// For setToppings()...
-
-/*
-for(int i = 0; i < toppings.length; i++) 
-{
-	
-}
-switch(readTopping) 
-{
-case "Pepperoni":
-	this.readTopping = toppings[0];
-	break;
-case "Anchovies":
-	this.readTopping = toppings[1];
-	break;
-case "Parmesan":
-	this.readTopping = toppings[2];
-	break;
-case "Olives":
-	this.readTopping = toppings[3];
-	break;
-case "Capers":
-	this.readTopping = toppings[4];
-	break;
-default:
-	System.out.println("Invalid topping. Reset to Pepperoni.");
-	this.readTopping = toppings[0];
-	break;
-}	*/

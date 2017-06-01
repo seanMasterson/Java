@@ -5,7 +5,7 @@ public class Dog extends Pet implements Mammal
 	public enum IsMicroChipped 
 	{
 		YES, NO;
-		/*private int microChipNumber;
+		private int microChipNumber;
 		
 		private IsMicroChipped() 
 		{
@@ -15,7 +15,7 @@ public class Dog extends Pet implements Mammal
 		int getMicroChipNumber(int microChipNumber) 
 		{
 			return microChipNumber;
-		}*/
+		}
 	};
 	
 	public IsMicroChipped getIsMicroChipped() 

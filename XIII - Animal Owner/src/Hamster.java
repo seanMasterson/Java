@@ -9,13 +9,13 @@ public class Hamster extends Pet implements Mammal
 	@Override
 	public void sleep() 
 	{
-		
+		System.out.println("The Hamster Sleeps...");
 	}
 	
 	@Override
 	public void walk() 
 	{
-		
+		System.out.println("Scurry.");
 	}
 	
 	public Hamster() 
@@ -23,9 +23,11 @@ public class Hamster extends Pet implements Mammal
 		
 	}
 	
-	public Hamster(String name, String breed, int age, IsFemale isFemale) 
+	public Hamster(String name, int age, String breed, IsFemale isFemale, String colour) 
 	{
-		super();
+		super(name, age, breed, isFemale, colour);
+		/*walk();
+		sleep();*/
 	}
 	
 	@Override

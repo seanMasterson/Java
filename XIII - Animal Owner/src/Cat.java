@@ -11,13 +11,13 @@ public class Cat extends Pet implements Mammal
 	@Override
 	public void sleep() 
 	{
-			
+		System.out.println("The Cat Sleeps...");
 	}
 	
 	@Override
 	public void walk() 
 	{
-		
+		System.out.println("Caper.");
 	}
 	
 	public int getNumOfLives() 
@@ -34,15 +34,17 @@ public class Cat extends Pet implements Mammal
 		
 	}
 	
-	public Cat(String name, String breed, int age, IsFemale isFemale, int numOfLives) 
+	public Cat(String name, int age, String breed, IsFemale isFemale, String colour, int numOfLives) 
 	{
-		super();
+		super(name, age, breed, isFemale, colour);
 		setNumOfLives(numOfLives);
+		/*walk();
+		sleep();*/
 	}
 	
 	@Override
 	public String toString() 
 	{
-		return super.toString() + getTypeOfAnimal() + ", Number of Lives: " + getNumOfLives();
+		return super.toString() + getTypeOfAnimal() + ", Number of Lives: " + getNumOfLives() + "]";
 	}
 }

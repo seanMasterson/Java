@@ -6,6 +6,9 @@ public abstract class Pet
 	private String colour;
 	private IsFemale isFemale;
 	
+	private static int petCounter = 1;
+	private int count;
+	
 	public enum IsFemale {YES, NO};
 	
 	public String getName() 
@@ -57,15 +60,16 @@ public abstract class Pet
 	
 	public Pet() 
 	{
-		
+		count = petCounter++;
 	}
 	
-	public Pet(String name, String breed, int age, String colour, IsFemale isFemale) 
+	public Pet(String name, int age, String breed, IsFemale isFemale, String colour) 
 	{
 		this();
 		this.name = name;
-		this.breed = breed;
 		this.age = age;
+		this.breed = breed;
+		setIsFemale(isFemale);
 		this.colour = colour;
 		setIsFemale(isFemale);
 	}
@@ -73,7 +77,8 @@ public abstract class Pet
 	@Override
 	public String toString() 
 	{
-		return "Pet [Name: " + getName() +  ", Breed: " + getBreed() + 
-			   ", Age: " + getAge() +  ", Colour: ";
+		return String.format("Pet [%d]", count) + " [Name: " + getName() + 
+				", Age: " + getAge() + ", Breed: " + getBreed() + ", Female (YES/NO): " + getIsFemale() + 
+				", Colour: " + getColour();
 	}
 }

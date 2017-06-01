@@ -11,14 +11,26 @@ public class Snake extends Pet
 		
 	}
 	
-	public Snake(String name, String breed, int age, IsFemale isFemale) 
+	public void walk() 
 	{
-		super();
+		System.out.println("Slither.");
+	}
+	
+	public void eats() 
+	{
+		System.out.println("The Serpent Eats...");
+	}
+	
+	public Snake(String name, int age, String breed, IsFemale isFemale, String colour) 
+	{
+		super(name, age, breed, isFemale, colour);
+		/*walk();
+		eats();*/
 	}
 	
 	@Override
 	public String toString() 
 	{
-		return super.toString() + getTypeOfAnimal();
+		return super.toString() + getTypeOfAnimal() + "]";
 	}
 }

@@ -3,6 +3,9 @@ public class Owner
 	private String name;
 	private String address;
 	private String phoneNumber;
+	private Pet[] pets;
+	private static int ownerCount = 1;
+	private int count;
 	
 	public String getName() 
 	{
@@ -31,15 +34,34 @@ public class Owner
 		this.phoneNumber = phoneNumber;
 	}
 	
-	public Owner() //no-args constructor  
+	public Pet[] getPets() 
 	{
-		
+		return pets;
 	}
 	
-	public Owner(String name, String address, String phoneNumber) 
+	public void setPets(Pet[] pets) 
 	{
+		this.pets = pets;
+	}
+	
+	public Owner() //no-args constructor  
+	{
+		count = ownerCount++;
+	}
+	
+	public Owner(String name, String address, String phoneNumber, Pet[] pets) 
+	{
+		this();
 		this.name = name;
 		this.address = address;
 		this.phoneNumber = phoneNumber;
+		setPets(pets);
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return String.format("Owner #%d", count) + " [Name: " + 
+			   name + ", Address: " + address + ", Phone Number: " + phoneNumber + "]";
 	}
 }

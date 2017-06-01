@@ -6,7 +6,7 @@ public class Ex13_1
 		Pet p1 = new Cat("Sanchez", 4, "Bengal", Pet.IsFemale.YES, "Dark Brown", 7);
 		Pet p2 = new Snake("Jormungandr", 560_000, "Midgard Serpent", Pet.IsFemale.NO, "Noisome Green");
 		Pet p3 = new Hamster("Guido", 15, "Roborovski", Pet.IsFemale.YES, "Dusky Yellow");
-		
+		//test
 		Pet[] petsOwner1 = {p0, p1};
 		Pet[] petsOwner2 = {p2};
 		Pet[] petsOwner3 = {p3};

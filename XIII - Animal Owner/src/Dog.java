@@ -6,7 +6,7 @@ public class Dog extends Pet implements Mammal
 	{
 		YES, NO;
 		private int microChipNumber;
-		
+		/*
 		private IsMicroChipped() 
 		{
 			this.microChipNumber = microChipNumber;
@@ -15,7 +15,7 @@ public class Dog extends Pet implements Mammal
 		int getMicroChipNumber(int microChipNumber) 
 		{
 			return microChipNumber;
-		}
+		}*/
 	};
 	
 	public IsMicroChipped getIsMicroChipped() 

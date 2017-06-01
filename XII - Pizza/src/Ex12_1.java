@@ -2,12 +2,12 @@ public class Ex12_1
 {
 	public static void main(String[] args) 
 	{
-		String[] toppings0 = {"Mozzarella","Pineapple","Ham"};
+		String[] toppings0 = {"Mozzarella", "Ham"};
 		String[] toppings1 = {"Peppers","Pepperoni","Pesto"};
 		String[] toppings2 = {"Jalapenos", "Anchovies", "Capers"};
-		String[] toppings3 = {"Habaneros", "Garlic", "Olives"};
-		String[] toppings4 = {"Chicken", "Beef", "BBQ Sauce"};
-		String[] toppings5 = {"Tomatoes", "Basil", "Mushrooms"};
+		String[] toppings3 = {"Garlic", "Olives"};
+		String[] toppings4 = {"Chicken", "Beef", "BBQ Sauce", "Habaneros"};
+		String[] toppings5 = {"Tomatoes", "Basil", "Mushrooms", "Parmesan"};
 		
 		Pizza p0 = new Pizza(toppings0, Pizza.PizzaSize.LARGE);
 		Pizza p1 = new Pizza(toppings1, Pizza.PizzaSize.MEDIUM);

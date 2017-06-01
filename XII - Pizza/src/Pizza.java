@@ -62,23 +62,23 @@ public class Pizza
 		{
 			case SMALL:
 				this.price = PRICE_SMALL; 
-				price += PRICE_TOPPING_ONE;
+				price += PRICE_TOPPING_ONE * toppings.length;
 				break;
 			case MEDIUM:
 				this.price = PRICE_MEDIUM;
-				price += PRICE_TOPPING_TWO;
+				price += PRICE_TOPPING_TWO  * toppings.length;
 				break;
 			case LARGE:
 				this.price = PRICE_LARGE; 
-				price += PRICE_TOPPING_THREE;
+				price += PRICE_TOPPING_THREE  * toppings.length;
 				break;
 			case EXTRA_LARGE:
-				this.price = PRICE_EXTRA_LARGE; 
+				this.price = PRICE_EXTRA_LARGE  * toppings.length; 
 				price += PRICE_TOPPING_FOUR;
 				break;
 			default:
 				System.out.println("Invalid Pizza Size. Reset to Medium Size.");
-				this.price = PRICE_MEDIUM;
+				this.price = PRICE_MEDIUM  * toppings.length;
 				break;
 		}
 		return price;
@@ -94,7 +94,6 @@ public class Pizza
 		this();
 		setToppings(toppings);
 		setPizzaSize(pizzaSize);
-		//calculatePrice();	
 	}
 	
 	@Override

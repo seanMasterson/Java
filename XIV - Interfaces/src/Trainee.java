@@ -40,6 +40,7 @@ public class Trainee
 	
 	public Trainee(String name, LocalDate dob, int pps) 
 	{
+		this();
 		this.name = name;
 		this.dob = dob;
 		this.pps = pps;
@@ -49,6 +50,4 @@ public class Trainee
 	{
 		return "Trainee [Name : " + name + ", Date Of Birth : " + dob + ", PPS Number : " + pps + "]";
 	}
-	
-	
 }

@@ -26,8 +26,6 @@ public class Hamster extends Pet implements Mammal
 	public Hamster(String name, int age, String breed, IsFemale isFemale, String colour) 
 	{
 		super(name, age, breed, isFemale, colour);
-		/*walk();
-		sleep();*/
 	}
 	
 	@Override

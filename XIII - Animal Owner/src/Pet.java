@@ -78,7 +78,7 @@ public abstract class Pet
 	public String toString() 
 	{
 		return String.format("Pet [%d]", count) + " [Name: " + getName() + 
-				", Age: " + getAge() + ", Breed: " + getBreed() + ", Female (YES/NO): " + getIsFemale() + 
-				", Colour: " + getColour();
+				", Age: " + getAge() + ", Breed: " + getBreed() + ", Female (YES/NO): " + getIsFemale() +
+				",\n\tColour: " + getColour();
 	}
 }

@@ -24,8 +24,6 @@ public class Snake extends Pet
 	public Snake(String name, int age, String breed, IsFemale isFemale, String colour) 
 	{
 		super(name, age, breed, isFemale, colour);
-		/*walk();
-		eats();*/
 	}
 	
 	@Override

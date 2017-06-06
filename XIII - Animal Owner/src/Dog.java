@@ -1,21 +1,11 @@
 public class Dog extends Pet implements Mammal
 {
 	private IsMicroChipped isMicroChipped;
+	private int microChipNumber;
 	
 	public enum IsMicroChipped 
 	{
 		YES, NO;
-		private int microChipNumber;
-		/*
-		private IsMicroChipped() 
-		{
-			this.microChipNumber = microChipNumber;
-		}
-		
-		int getMicroChipNumber(int microChipNumber) 
-		{
-			return microChipNumber;
-		}*/
 	};
 	
 	public IsMicroChipped getIsMicroChipped() 
@@ -46,22 +36,32 @@ public class Dog extends Pet implements Mammal
 		System.out.println("Trot.");
 	}
 	
+	public int getMicroChipNumber() 
+	{
+		/*if(setIsMicroChipped(isMicroChipped) == IsMicroChipped.YES)
+			return;*/
+		return microChipNumber;
+	}
+	public void setMicroChipNumber(int microChipNumber)
+	{
+		this.microChipNumber = microChipNumber;
+	}
+
 	public Dog() 
 	{
 		
 	}
 	
-	public Dog(String name, int age, String breed, IsFemale isFemale, String colour, IsMicroChipped isMicroChipped) 
+	public Dog(String name, int age, String breed, IsFemale isFemale, String colour, IsMicroChipped isMicroChipped, int microChipNumber) 
 	{
 		super(name, age, breed, isFemale, colour);
 		setIsMicroChipped(isMicroChipped);
-		/*walk();
-		sleep();*/
+		setMicroChipNumber(microChipNumber);
 	}
 	
 	@Override
 	public String toString() 
 	{
-		return super.toString() + getTypeOfAnimal() + ", Micro Chipped (YES/NO): " + getIsMicroChipped() + "]";
+		return super.toString() + getTypeOfAnimal() + ", Microchipped? (YES/NO): " + getIsMicroChipped() + ", Microchip Number: " + getMicroChipNumber() + "]";
 	}
 }

@@ -2,11 +2,11 @@ public class Ex13_1
 {
 	public static void main(String[] args) 
 	{
-		Pet p0 = new Dog("Morrison", 7, "Terrier", Pet.IsFemale.NO, "Tawny", Dog.IsMicroChipped.YES);
+		Pet p0 = new Dog("Morrison", 7, "Terrier", Pet.IsFemale.NO, "Tawny", Dog.IsMicroChipped.YES, 2335);
 		Pet p1 = new Cat("Sanchez", 4, "Bengal", Pet.IsFemale.YES, "Dark Brown", 7);
 		Pet p2 = new Snake("Jormungandr", 560_000, "Midgard Serpent", Pet.IsFemale.NO, "Noisome Green");
 		Pet p3 = new Hamster("Guido", 15, "Roborovski", Pet.IsFemale.YES, "Dusky Yellow");
-		//test
+		
 		Pet[] petsOwner1 = {p0, p1};
 		Pet[] petsOwner2 = {p2};
 		Pet[] petsOwner3 = {p3};
@@ -25,6 +25,17 @@ public class Ex13_1
 			for(int j = 0; j < petArrays[i].length; j++) 
 			{
 				System.out.println(petArrays[i][j].toString() + "\n");
+				if(petArrays[i][j] instanceof Mammal) 
+				{
+					((Mammal) petArrays[i][j]).walk(); 
+					((Mammal) petArrays[i][j]).sleep();
+				}
+				
+				if(petArrays[i][j] instanceof Snake)
+				{
+					((Snake) petArrays[i][j]).walk();
+					((Snake) petArrays[i][j]).eats();
+				}
 			}
 			System.out.println();
 		}

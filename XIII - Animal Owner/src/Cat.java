@@ -38,8 +38,6 @@ public class Cat extends Pet implements Mammal
 	{
 		super(name, age, breed, isFemale, colour);
 		setNumOfLives(numOfLives);
-		/*walk();
-		sleep();*/
 	}
 	
 	@Override

@@ -13,16 +13,10 @@ public class Ex14_1
 		for(Trainee t : trainees) 
 		{
 			System.out.println(t);
-			if(t instanceof Carpenter) 
+			if(t instanceof Apprentice) 
 			{
-				if(((Carpenter) t).getPhases() == Apprentice.PHASE_TWO)
-					System.out.println("Carpenter Name: " + t.getName() + ", Employer's Name: " + ((Carpenter) t).getEmployersName());
-			}	
-			
-			if(t instanceof Electrician) 
-			{
-				if(((Electrician) t).getPhases() == Apprentice.PHASE_TWO)
-					System.out.println("Carpenter Name: " + t.getName() + ", Employer's Name: " + ((Electrician) t).getEmployersName());
+				if(((Apprentice) t).getPhases() == Apprentice.PHASE_TWO)
+					System.out.println("Name: " + t.getName() + ", Employer's Name: " + ((Apprentice) t).getEmployersName());
 			}	
 		}
 	}

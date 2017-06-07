@@ -8,7 +8,7 @@ public class Clock_XV extends InvalidTimeException
 	{
 		return hours;
 	}
-	public void setHours(int hours) 
+	public void setHours(int hours)
 	{
 		if(hours < 24)
 			this.hours = hours;
@@ -22,7 +22,7 @@ public class Clock_XV extends InvalidTimeException
 	{
 		return minutes;
 	}
-	public void setMinutes(int minutes) 
+	public void setMinutes(int minutes)
 	{
 		if(minutes < 60)
 			this.minutes = minutes;
@@ -36,7 +36,7 @@ public class Clock_XV extends InvalidTimeException
 	{
 		return seconds;
 	}
-	public void setSeconds(int seconds) 
+	public void setSeconds(int seconds)
 	{
 		if(seconds < 60)
 			this.seconds = seconds;
@@ -58,14 +58,13 @@ public class Clock_XV extends InvalidTimeException
 	{
 		hours += incHours;
 		setHours(hours);
-		
 		return hours;
 	}
 	
 	public int incrementMinutes(int incMinutes) 
 	{
 		minutes += incMinutes;
-		setHours(minutes);
+		setMinutes(minutes);
 		
 		return minutes;
 	}
@@ -73,8 +72,7 @@ public class Clock_XV extends InvalidTimeException
 	public int incrementSeconds(int incSeconds)
 	{
 		seconds += incSeconds;
-		setHours(hours);
-		
+		setSeconds(seconds);
 		return seconds;
 	}
 	
@@ -83,11 +81,16 @@ public class Clock_XV extends InvalidTimeException
 		
 	}
 	
-	public Clock_XV(int hours, int minutes, int seconds) 
-	{
-		this.hours = hours;
-		this.minutes = minutes;
-		this.seconds = seconds;
+	public Clock_XV(int hours, int minutes, int seconds) throws InvalidTimeException
+	{	
+		if((hours >= 0 && hours <= 24) && (minutes >= 0 && minutes <= 60) && (seconds >= 0 && seconds <= 60)) 
+		{	
+			this.hours = hours;
+			this.minutes = minutes;
+			this.seconds = seconds;
+		}
+		else
+			throw new InvalidTimeException("That’s definitely not a correct time.");
 	}
 	
 	@Override

@@ -1,12 +1,12 @@
-public class InvalidTimeException 
+public class InvalidTimeException extends Exception
 {
 	public InvalidTimeException() 
 	{
 		
 	}
 	
-	public InvalidTimeException(String exceptionTime) 
+	public InvalidTimeException(String message) 
 	{
-		
+		super(message);
 	}
 }

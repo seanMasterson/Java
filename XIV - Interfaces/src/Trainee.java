@@ -5,6 +5,8 @@ public class Trainee
 	private String name;
 	private LocalDate dob;
 	private int pps;
+	private static int traineeCounter = 1;
+	private int count;
 	
 	public String getName() 
 	{
@@ -35,7 +37,7 @@ public class Trainee
 	
 	public Trainee() 
 	{
-
+		count = traineeCounter++;
 	}
 	
 	public Trainee(String name, LocalDate dob, int pps) 
@@ -48,6 +50,6 @@ public class Trainee
 	@Override
 	public String toString() 
 	{
-		return "Trainee [Name : " + name + ", Date Of Birth : " + dob + ", PPS Number : " + pps + "]";
+		return "Trainee #" + count + " [Name : " + name + ", Date Of Birth : " + dob + ", PPS Number : " + pps + "]";
 	}
 }

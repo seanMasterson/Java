@@ -2,40 +2,34 @@ import java.time.LocalDate;
 
 public class Carpenter extends Trainee implements Apprentice 
 {
-	private int phase;
 	private String employersName;
-	
+	private int phase;
+
 	@Override
-	public int getPhase() 
+	public int getPhases() 
 	{
 		return phase;
 	}
+	
 	@Override
-	public void setPhase(int phase) 
+	public void setPhases(int phase) 
 	{
-		/*if(phaseNum.equals(Phases.PHASE_ONE))
-			this.phase = phase;
-		Phases ps = Phases(phase);
 		switch (phase) 
 		{
-			case 1:
-				this.phase = Phases.PHASE_ONE;
+			case PHASE_ONE:
+			case PHASE_TWO:
+			case PHASE_THREE:
+			case PHASE_FOUR:
+			case PHASE_FIVE:
+			case PHASE_SIX:
+				this.phase = phase;
 				break;
-			case 2:
-				phase = Phases.PHASE_TWO;
-				break;
-			case 3:
-				phase = Phases.PHASE_THREE;
-				break;
-			case 4:
-				phase = Phases.PHASE_ONE;
-				break;
-			case 5:
-				phase = Phases.PHASE_ONE;
-				break;
+	
 			default:
+				System.out.println("Not a valid entry. Reset to Phase One.");
+				this.phase = PHASE_ONE;
 				break;
-		}*/	
+		}
 	}
 	
 	@Override
@@ -54,14 +48,16 @@ public class Carpenter extends Trainee implements Apprentice
 	
 	}
 	
-	public Carpenter(String name, LocalDate dob, int pps) 
+	public Carpenter(String name, LocalDate dob, int pps, int phase, String employersName) 
 	{
 		super(name, dob, pps);
+		setPhases(phase);
+		setEmployersName(employersName);
 	}
 	
 	@Override
 	public String toString() 
 	{
-		return super.toString();
+		return super.toString() + "]";
 	}
 }

@@ -9,13 +9,8 @@ public class Weekday
 	}
 	public void setWeekday(String weekday) throws InvalidWeekdayException
 	{
-		for(int i = 0; i < week.length; i++) 
-		{
-			if(week[i] == weekday)
-				this.weekday = weekday;
-			else
-				throw new InvalidWeekdayException("Not a valid day.");
-		}	
+		this.weekday = weekday;
+		throw new InvalidWeekdayException("Not a valid day.");
 	}
 
 	public Weekday() 
@@ -23,16 +18,9 @@ public class Weekday
 		
 	}
 	
-	public Weekday(String weekday) 
+	public Weekday(String weekday) throws InvalidWeekdayException
 	{
-		try 
-		{
 			setWeekday(weekday);
-		}
-		catch(InvalidWeekdayException  w) 
-		{
-			
-		}
 	}
 	
 	@Override

@@ -6,7 +6,7 @@ public class Ex16_2
 		System.out.println(todayMenu);
 		
 		//a
-		String string0 = todayMenu.substring(11, todayMenu.length());
+		String string0 = todayMenu.substring(todayMenu.indexOf(" "), todayMenu.length());
 		String tomorrowMenu = "Thursday's";
 		tomorrowMenu = tomorrowMenu.concat(string0);
 		System.out.println(tomorrowMenu);
@@ -17,11 +17,9 @@ public class Ex16_2
 		System.out.println(newMenu);
 		
 		//c
-		System.out.println(newMenu + " Jelly and Ice Cream for Dessert.");
+		System.out.println(newMenu = newMenu.concat(" Jelly and Ice Cream for Dessert."));
 		
 		//d
-		String regex = "\band\bIce\bCream.";
-		System.out.println(newMenu.substring(regex, newMenu.length()));
-		
+		System.out.println(newMenu.replaceAll(" and Ice Cream ", " "));
 	}
 }

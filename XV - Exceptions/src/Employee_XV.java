@@ -1,5 +1,7 @@
 public class Employee_XV extends InvalidAgeException
 {
+	private static final long serialVersionUID = 15L;
+	
 	private String name;
 	private int age;
 	private double salary;
@@ -83,18 +85,11 @@ public class Employee_XV extends InvalidAgeException
 		numEmployees++;
 	}
 	
-	public Employee_XV(String name, int age, double salary, int sickDays, int employeeNum) 
+	public Employee_XV(String name, int age, double salary, int sickDays, int employeeNum) throws InvalidAgeException
 	{
 		this();
 		this.name = name;
-		try 
-		{
-			setAge(age);
-		}
-		catch(InvalidAgeException e)
-		{
-			
-		}
+		setAge(age);
 		setSalary(salary);
 		increaseSalary(salary);
 		setSickDays(sickDays);

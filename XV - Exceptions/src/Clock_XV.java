@@ -1,5 +1,7 @@
 public class Clock_XV extends InvalidTimeException
 {	
+	private static final long serialVersionUID = 15L;
+	
 	private int hours;
 	private int minutes;
 	private int seconds;

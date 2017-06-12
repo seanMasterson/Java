@@ -33,6 +33,12 @@ public class Trainee
 		this.birthday = birthday;
 	}
 	
+	/*@Override
+	public boolean equals() 
+	{
+		;
+	}
+	*/
 	public Trainee() 
 	{
 		super();

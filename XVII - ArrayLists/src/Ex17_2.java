@@ -14,5 +14,6 @@ public class Ex17_2
 		trainees.add(t0);
 		trainees.add(t2);
 		trainees.add(t3);
+		
 	}
 }

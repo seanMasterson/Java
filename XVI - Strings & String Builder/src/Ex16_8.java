@@ -13,5 +13,7 @@ public class Ex16_8
 		System.out.println("Words: \t" + words.length);
 		System.out.println("Characters (including whitespace): \t" + input.length());
 		System.out.println("Characters (excluding whitespace): \t" + input.replace(" ", "").length()); //overloaded method?
+		
+		sc0.close();
 	}
 }

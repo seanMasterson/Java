@@ -10,7 +10,7 @@ public class Ex16_5
 		String word = sc0.nextLine();
 		
 		System.out.println("Enter a search character: ");
-		char character = sc0.next().charAt(0);
+		char character = sc0.next().charAt(0); // Check what I did here...
 		
 		for(int i = 0; i < word.length(); i++) 
 		{

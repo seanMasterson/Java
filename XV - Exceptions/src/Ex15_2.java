@@ -2,7 +2,6 @@ public class Ex15_2
 {
 	public static void main(String[] args) 
 	{
-		
 		try
 		{
 			Clock_XV c0 = new Clock_XV(23, 59, 59);

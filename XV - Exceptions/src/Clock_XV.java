@@ -85,7 +85,7 @@ public class Clock_XV extends InvalidTimeException
 	
 	public Clock_XV(int hours, int minutes, int seconds) throws InvalidTimeException
 	{	
-		if((hours >= 0 && hours <= 24) && (minutes >= 0 && minutes <= 60) && (seconds >= 0 && seconds <= 60)) 
+		if((hours >= 0 && hours < 24) && (minutes >= 0 && minutes < 60) && (seconds >= 0 && seconds < 60)) 
 		{	
 			this.hours = hours;
 			this.minutes = minutes;

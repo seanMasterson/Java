@@ -4,7 +4,7 @@ public class Ex16_6
 {
 	public static void main(String[] args) 
 	{
-		System.out.println("***WELCOME TO THE GOJIRA GUESSING GAME COME MY FIENDS***");
+		System.out.println("***WELCOME TO THE GOJIRA GUESSING GAME***");
 		Scanner sc0 = new Scanner(System.in);
 		
 		String[] myWords = {"serpent", "spine", "phoenix", "firebird"};

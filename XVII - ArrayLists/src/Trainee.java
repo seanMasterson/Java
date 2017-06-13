@@ -39,6 +39,7 @@ public class Trainee
 		;
 	}
 	*/
+	
 	public Trainee() 
 	{
 		super();

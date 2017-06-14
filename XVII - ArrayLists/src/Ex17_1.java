@@ -29,6 +29,7 @@ public class Ex17_1
 		System.out.println("Select a name to remove: ");
 		String nameRemove = sc0.nextLine();
 		
+		// Use iterator to manipulate an ArrayList in an iterative structure.
 		for(Iterator<String> iterator = nameList.iterator(); iterator.hasNext();)
 		{
 			String n = iterator.next();
@@ -38,6 +39,8 @@ public class Ex17_1
 				iterator.remove();
 			}
 		}
+		
+		
 		
 		sc0.close();
 	}

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -18,7 +19,7 @@ public class Ex17_1
 		System.out.println("Please enter a name: ");
 		String name = sc0.nextLine();
 		
-		System.out.println(nameList.size());
+		System.out.println("Size of Name Array: " + nameList.size());
 		
 		for(String n : nameList) 
 		{
@@ -40,8 +41,23 @@ public class Ex17_1
 			}
 		}
 		
+		System.out.println("Size of Name Array: " + nameList.size() + "\n");
 		
+		nameList.set(4, "Laetare");
+		System.out.println(nameList + "\n");
 		
+		Collections.sort(nameList);
+		System.out.println("In Alphabetical Order: " + nameList + "\n");
+		
+		System.out.println("Name at element[7]: " + nameList.get(7));
+		nameList.remove(7);
+		
+		nameList.add(0, "The Old Woman");
+		System.out.println(nameList + "\n");
+		
+		System.out.println(nameList.size() == 0? "Empty." : "Full.");
+		nameList.clear();
+		System.out.println(nameList.size() == 0? "Empty." : "Full.");
 		sc0.close();
 	}
 }

@@ -16,8 +16,13 @@ public class Ex17_2
 		trainees.add(t3);
 		
 		t2.setAddress("San Fierro, San Andreas");
-		System.out.println(t2);
+		System.out.println(t2 + "\n");
 		
 		trainees.remove(t3);
+		
+		for(Trainee t : trainees) 
+		{
+			System.out.println(t);
+		}
 	}
 }

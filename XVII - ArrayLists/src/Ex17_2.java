@@ -15,5 +15,9 @@ public class Ex17_2
 		trainees.add(t2);
 		trainees.add(t3);
 		
+		t2.setAddress("San Fierro, San Andreas");
+		System.out.println(t2);
+		
+		trainees.remove(t3);
 	}
 }

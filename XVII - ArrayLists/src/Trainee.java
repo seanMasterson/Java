@@ -58,6 +58,4 @@ public class Trainee
 	{
 		return "Trainee [Name : " + name + ", Address : " + address + ", Birthday : " + birthday + "]";
 	}
-	
-	
 }

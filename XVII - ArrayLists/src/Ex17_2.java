@@ -28,13 +28,13 @@ public class Ex17_2
 		System.out.print("Enter a name: ");
 		String name = sc.nextLine();
 		
-		/*for(int i = 0; i < trainees.size(); i++) 
+		for(Trainee t : trainees) 
 		{
-			if(trainees.contains(t0)) 
+			if(t.getName() == name) 
 			{
-				System.out.println(t0);
+				System.out.println(t.getName());
 			}
-		}*/
+		}
 		
 		trainees.remove(t3);
 		

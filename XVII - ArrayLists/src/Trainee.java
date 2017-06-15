@@ -43,16 +43,12 @@ public class Trainee
 	{
 		Trainee t = (Trainee)obj;
 		
+		if(this.name.equals(t.name) && this.address.equals(t.address) && this.birthday.equals(t.birthday))
+			return true;
 		if(obj == null)
 			return false;
-		if(this.name.equals(t.name))
+		else
 			return false;
-		if(this.address.equals(t.address))
-			return false;
-		if(this.birthday.equals(t.birthday))
-			return false;
-		
-		return true;
 	}
 	
 	public Trainee() 
@@ -73,6 +69,6 @@ public class Trainee
 	{
 		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
-		return "Trainee #" + count + " [Name : " + name + ", Address : " + address + ", Birthday : " + birthday.format(dateFormat) + "]";
+		return "Trainee #" + count + " [Name : " + getName() + ", Address : " + getAddress() + ", Birthday : " + getBirthday().format(dateFormat) + "]";
 	}
 }

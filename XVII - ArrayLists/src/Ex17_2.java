@@ -10,8 +10,8 @@ public class Ex17_2
 		
 		Trainee t0 = new Trainee("Patrick Heaney", "Delgany, Co. Wicklow", LocalDate.of(1962, 2, 8));
 		Trainee tCopy = new Trainee("Patrick Heaney", "Delgany, Co. Wicklow", LocalDate.of(1962, 2, 8)); // Do not add to the ArrayList.
-		Trainee t2 = new Trainee("Mille Petrozza", "Kassel", LocalDate.of(1967, 10, 13));
-		Trainee t3 = new Trainee("Glen Benton", "Tampa, Florida", LocalDate.of(1997, 5, 9));
+		Trainee t2 = new Trainee("Werner Petrozza", "Kassel", LocalDate.of(1967, 10, 13));
+		Trainee t3 = new Trainee("Harry Benton", "Tampa, Florida", LocalDate.of(1997, 5, 9));
 		Trainee t4 = new Trainee("Marge Simpson", "Springfield, ?", LocalDate.of(1989, 11, 25));
 		
 		ArrayList<Trainee> trainees = new ArrayList<Trainee>();
@@ -25,22 +25,28 @@ public class Ex17_2
 		t2.setAddress("San Fierro, San Andreas");
 		System.out.println(t2 + "\n");
 		
+		System.out.println(trainees);
+		
+		trainees.remove(t2);
+		
+		System.out.println(trainees);
+		
 		System.out.print("Enter a name: ");
 		String name = sc.nextLine();
-		
+		/*
 		for(Trainee t : trainees) 
 		{
 			if(t.getName() == name) 
 			{
-				System.out.println(t.getName());
+				System.out.println( "In Here " + t.getName());
 			}
 		}
 		
-		trainees.remove(t3);
+		
 		
 		for(Trainee t : trainees) 
 		{
 			System.out.println(t);
-		}
+		}*/
 	}
 }

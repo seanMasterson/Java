@@ -1,10 +1,15 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import javax.print.attribute.standard.MediaSize.Other;
 
 public class Trainee 
 {
 	private String name;
 	private String address;
 	private LocalDate birthday;
+	private static int traineeCounter;
+	private int count = 1;
 	
 	public String getName() 
 	{
@@ -33,21 +38,31 @@ public class Trainee
 		this.birthday = birthday;
 	}
 	
-	/*@Override
-	public boolean equals() 
+	@Override
+	public boolean equals(Object obj) 
 	{
-		;
+		Trainee t = (Trainee)obj;
+		
+		if(obj == null)
+			return false;
+		if(this.name.equals(t.name))
+			return false;
+		if(this.address.equals(t.address))
+			return false;
+		if(this.birthday.equals(t.birthday))
+			return false;
+		
+		return true;
 	}
-	*/
 	
 	public Trainee() 
 	{
-		super();
+		count = traineeCounter++;
 	}
 	
 	public Trainee(String name, String address, LocalDate birthday) 
 	{
-		super();
+		this();
 		this.name = name;
 		this.address = address;
 		this.birthday = birthday;
@@ -56,6 +71,8 @@ public class Trainee
 	@Override
 	public String toString() 
 	{
-		return "Trainee [Name : " + name + ", Address : " + address + ", Birthday : " + birthday + "]";
+		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		
+		return "Trainee #" + count + " [Name : " + name + ", Address : " + address + ", Birthday : " + birthday.format(dateFormat) + "]";
 	}
 }

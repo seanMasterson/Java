@@ -23,14 +23,14 @@ public class Ex17_2
 		t2.setAddress("San Fierro, San Andreas");
 		System.out.println(t2 + "\n");
 		
-		System.out.println("Enter a name: ");
+		System.out.print("Enter a name: ");
 		String name = sc.nextLine();
 		
 		for(int i = 0; i < trainees.size(); i++) 
 		{
-			if() 
+			if(trainees.contains(name)) 
 			{
-				
+				System.out.println(name);
 			}
 		}
 		

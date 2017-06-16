@@ -1,8 +1,6 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import javax.print.attribute.standard.MediaSize.Other;
-
 public class Trainee 
 {
 	private String name;

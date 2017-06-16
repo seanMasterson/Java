@@ -20,33 +20,37 @@ public class Ex17_2
 		trainees.add(t3);
 		trainees.add(t4);
 		
-		System.out.println(trainees.contains(tCopy));
+		System.out.println(trainees.contains(tCopy) + "\n");
 		
 		t2.setAddress("San Fierro, San Andreas");
 		System.out.println(t2 + "\n");
 		
-		System.out.println(trainees);
-		
-		trainees.remove(t2);
-		
-		System.out.println(trainees);
+		System.out.println(trainees + "\n");
 		
 		System.out.print("Enter a name: ");
 		String name = sc.nextLine();
-		/*
+		
 		for(Trainee t : trainees) 
 		{
-			if(t.getName() == name) 
-			{
-				System.out.println( "In Here " + t.getName());
-			}
+			if(name.equals(t.getName())) 
+				System.out.println( "In Here: " + t.getName() + "\n");	
+		}
+		if(!(name.equals(trainees.get(0).getName())) && 
+				!(name.equals(trainees.get(1).getName())) && 
+				!(name.equals(trainees.get(2).getName())) && 
+				!(name.equals(trainees.get(3).getName()))) 
+		{
+			System.out.println("No Joe\n");
 		}
 		
-		
-		
+		trainees.remove(t2);
+
 		for(Trainee t : trainees) 
 		{
-			System.out.println(t);
-		}*/
+			System.out.println(t + "\n");
+			
+		}
+		
+		sc.close();
 	}
 }

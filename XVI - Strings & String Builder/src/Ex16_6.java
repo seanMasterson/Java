@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex16_6 
@@ -5,39 +6,64 @@ public class Ex16_6
 	public static void main(String[] args) 
 	{
 		System.out.println("***WELCOME TO THE GOJIRA GUESSING GAME***");
-		Scanner sc0 = new Scanner(System.in);
 		
-		String[] myWords = {"serpent", "spine", "uroboric", "fire"};
+		String[] myWords = {"serpent", "spine", "uroboric", "fire", "gojira"};
 
-		int incorrectGuessCounter = 0;
-		
-		int randomNumber = (int)(Math.random()*4);
+		int randomNumber = (int)(Math.random()*5);
 		String word = myWords[randomNumber];
+		System.out.println(word);
 		
-		do
+		System.out.print("\nA " + word.length() + "-letter word has been picked at random. Please guess a letter: ");
+		
+		char[] stars = new char[word.length()];
+		for(int i = 0; i < stars.length; i++) 
 		{
-			System.out.print("A " + word.length() + "-letter word has been picked at random. Please guess a letter: ");		
-			char guess = sc0.next().charAt(0);
-			
-			int counter = 0;
-			
-			for(int i = 0; i < word.length(); i++) 
-			{
-				if(word.charAt(i) == guess)
-				{
-					System.out.println( guess + " was found at position [" + i + "].\n");
-					counter++;
-					break;
-				}
-			}
-			if(counter == 0)
-			{
-				System.out.println("Letter not found.\n");
-				incorrectGuessCounter++;
-			}	
-		} while(incorrectGuessCounter < 8); 
+			stars[i] = '*';
+		}
 		
-		System.out.println("***PROGRAM TERMINATED***");
-		sc0.close();
+		try(Scanner sc0 = new Scanner(System.in);) 
+		{
+			int incorrectGuessCounter = 3;
+			
+			char[] letters = word.toCharArray();
+			
+			do
+			{
+				char guess = sc0.next().charAt(0);
+
+				boolean isFound = false;
+				
+				for(int i = 0; i < letters.length; i++) 
+				{
+					if(letters[i] == guess)
+					{
+						System.out.println(guess + " was found at position [" + (i + 1) + "].\n");
+						isFound = true;
+						stars[i] = guess;
+						System.out.println(stars);
+						if(Arrays.equals(stars, letters)) 
+						{
+							System.out.println("***WIN**");
+							System.exit(0);
+						}
+					}
+				}
+				
+				if(isFound == false)
+				{
+					System.out.println("Letter not found.");
+					incorrectGuessCounter--;
+				}
+				if(incorrectGuessCounter > 0)
+				{
+					System.out.printf("%d guesses left.", incorrectGuessCounter);
+				}	
+				else 
+				{
+					System.out.println("***PROGRAM TERMINATED***");
+				}
+				
+			} while(incorrectGuessCounter > 0); 	
+		}
 	}
 }

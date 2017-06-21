@@ -1,7 +1,6 @@
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,6 +23,7 @@ public class MyCalculator extends JFrame implements ActionListener
 	
 	private void initComponents() 
 	{
+		// Labels
 		JLabel lbl1 = new JLabel("First Value : ");
 		JLabel lbl2 = new JLabel("Second Value : ");
 		JLabel lbl3 = new JLabel("Result : ");
@@ -36,6 +36,7 @@ public class MyCalculator extends JFrame implements ActionListener
 		add(lbl2);
 		add(lbl3);
 		
+		// Text
 		JTextField txt1 = new JTextField();
 		JTextField txt2 = new JTextField();
 		JTextField txt3 = new JTextField();
@@ -49,6 +50,7 @@ public class MyCalculator extends JFrame implements ActionListener
 		add(txt2);
 		add(txt3);
 		
+		// Signs & Buttons
 		JLabel lblSumSign = new JLabel("+");
 		JLabel lblEquals = new JLabel("=");
 		JButton btnCalculate = new JButton("Calculate");
@@ -61,12 +63,26 @@ public class MyCalculator extends JFrame implements ActionListener
 		add(lblEquals);
 		add(btnCalculate);
 		
-		btnCalculate.addActionListener(this);
+		//btnCalculate.addActionListener(this);
+		
+		btnCalculate.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				calculateButtonPressed();
+			}
+		});
 	}
 	
 	public static void main(String[] args) 
 	{
 		new MyCalculator().setVisible(true);
+	}
+	
+	private void calculateButtonPressed() 
+	{
+		JOptionPane.showMessageDialog(this, "Hello");
 	}
 	
 	@Override

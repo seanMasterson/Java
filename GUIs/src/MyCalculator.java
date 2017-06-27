@@ -1,4 +1,3 @@
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -37,9 +36,9 @@ public class MyCalculator extends JFrame implements ActionListener
 		add(lbl3);
 		
 		// Text
-		JTextField txt1 = new JTextField();
-		JTextField txt2 = new JTextField();
-		JTextField txt3 = new JTextField();
+		txt1 = new JTextField();
+		txt2 = new JTextField();
+		txt3 = new JTextField();
 		
 		txt1.setBounds(20, 50, 65, 30);
 		txt2.setBounds(120, 50, 65, 30);
@@ -75,14 +74,30 @@ public class MyCalculator extends JFrame implements ActionListener
 		});
 	}
 	
-	public static void main(String[] args) 
-	{
-		new MyCalculator().setVisible(true);
-	}
-	
 	private void calculateButtonPressed() 
 	{
-		JOptionPane.showMessageDialog(this, "Hello");
+		try 
+		{
+			int num1 = Integer.parseInt(txt1.getText());
+			try 
+			{
+				int num2 = Integer.parseInt(txt2.getText());
+				int result = num1 + num2;
+				txt3.setText("" + result);
+			}
+			catch(NumberFormatException e) 
+			{
+				JOptionPane.showMessageDialog(this, "Please type an int for the second number.");
+				txt1.requestFocus();
+				txt1.selectAll();
+			}
+		} 
+		catch (NumberFormatException e) 
+		{
+			JOptionPane.showMessageDialog(this, "Please type an int for the first number.");
+			txt1.requestFocus();
+			txt1.selectAll();
+		}
 	}
 	
 	@Override
@@ -90,4 +105,13 @@ public class MyCalculator extends JFrame implements ActionListener
 	{
 		JOptionPane.showMessageDialog(this, "Button was clicked.");
 	}
+	
+	public static void main(String[] args) 
+	{
+		new MyCalculator().setVisible(true);
+	}
+	
+	private JTextField txt1;
+	private JTextField txt2;
+	private JTextField txt3;
 }

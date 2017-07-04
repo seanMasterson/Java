@@ -1,7 +1,5 @@
-public class Ex2_7
-{
-	public static void main(String [] args) 
-	{		
+public class Ex2_7{
+	public static void main(String [] args) {		
 		double num1 = 5;
 		double num2 = 6.5;
 		
@@ -11,14 +9,12 @@ public class Ex2_7
 		System.out.println("The area of the cube in question is : " + area2);
 	}
 	
-	private static double getArea1(double x, double y) 
-	{
+	private static double getArea1(double x, double y) {
 		double area = 2*(Math.PI)*(x)*(y) + 2*(Math.PI)*(x * x);
 		return area;
 	}
 	
-	private static double getArea2(double x) 
-	{
+	private static double getArea2(double x) {
 		double area = 6*(x * x);	 
 		return area;
 	}

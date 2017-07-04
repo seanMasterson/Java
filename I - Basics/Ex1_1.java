@@ -1,7 +1,5 @@
-public class Ex1_1 
-{
-	public static void main(String [] args) 
-	{
+public class Ex1_1 {
+	public static void main(String [] args) {
 		String line1 = "How are you...";
 		String line2 = "Mr.Bond?";
 		

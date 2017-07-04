@@ -1,7 +1,5 @@
-public class Ex2_6 
-{
-	public static void main(String [] args) 
-	{		
+public class Ex2_6 {
+	public static void main(String [] args) {		
 		Ex2_6 n0 = new Ex2_6();
 	
 		int a = 5;
@@ -15,14 +13,12 @@ public class Ex2_6
 		System.out.printf("The average of the numbers provided equals: %.2f ", average);
 	}
 	
-	private double getTotal(int x, double y, double z) 
-	{
+	private double getTotal(int x, double y, double z) {
 		double tot = (double)x + y + z;		 		
 		return tot;
 	}
 	
-	private double getAverage(int x, double y, double z) 
-	{
+	private double getAverage(int x, double y, double z) {
 		double avg = ((double)x + y + z)/ 3;		 		
 		return avg;
 	}

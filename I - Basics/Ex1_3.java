@@ -1,9 +1,7 @@
 import javax.swing.JOptionPane;
 
-public class Ex1_3 
-{
-	public static void main(String [] args) 
-	{
+public class Ex1_3 {
+	public static void main(String [] args) {
 		double salary = 28_000;
 		System.out.println("Salary:\t" + salary);
 		

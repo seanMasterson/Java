@@ -1,7 +1,5 @@
-public class Ex1_2 
-{
-	public static void main(String [] args) 
-	{
+public class Ex1_2 {
+	public static void main(String [] args) {
 		int num1 = 25;
 		double num2 = 3.6;
 		double num3 = 12.9;

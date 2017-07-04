@@ -1,7 +1,5 @@
-public class Ex2_8
-{
-	public static void main(String [] args) 
-	{		
+public class Ex2_8{
+	public static void main(String [] args) {		
 		int yearlySal = 30_150;
 		System.out.println("Your current salary stands at: " + yearlySal);
 		
@@ -18,20 +16,17 @@ public class Ex2_8
 		System.out.printf("Your salary after a 6%% pay rise is: %.2f\n", ans2);
 	}
 	
-	private static double getWeeklySalary(int sal) 
-	{
+	private static double getWeeklySalary(int sal) {
 		double weekSal = sal / 52;		 		
 		return weekSal;
 	}
 	
-	private static double getMonthlySalary(int sal) 
-	{
+	private static double getMonthlySalary(int sal) {
 		double monthSal= sal / 12;
 		return monthSal;
 	}
 	
-	private static double getPayRise(int sal, double percentPay) 
-	{
+	private static double getPayRise(int sal, double percentPay) {
 		double payIncr = sal + (sal * (percentPay)/100);
 		return payIncr;
 	}

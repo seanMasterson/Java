@@ -1,7 +1,5 @@
-public class Ex2_1 
-{
-	public static void main(String [] args) 
-	{
+public class Ex2_1 {
+	public static void main(String [] args) {
 		int num1 = 5;
 		int num2 = 8;	
 		
@@ -21,32 +19,27 @@ public class Ex2_1
 		System.out.println("The modulus of the numbers equals: " + result4);			
 	}
 	
-	public static int add(int x, int y) 
-	{
+	public static int add(int x, int y) {
 		int sum = x	+ y;
 		return sum;
 	}
 	
-	public static int subtract(int x, int y)
-	{
+	public static int subtract(int x, int y){
 		int difference = x - y;
 		return difference;
 	}
 	
-	public static int multiply(int x, int y) 
-	{
+	public static int multiply(int x, int y) {
 		int product = x * y;
 		return product;
 	}
 	
-	public static double divide(int x, int y) 
-	{
+	public static double divide(int x, int y) {
 		double quotient = x / y;
 		return quotient;
 	} 
 	
-	public static int modulus(int x, int y) 
-	{
+	public static int modulus(int x, int y) {
 		int mod = x % y;
 		return mod;
 	}

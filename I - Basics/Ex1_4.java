@@ -1,7 +1,5 @@
-public class Ex1_4 
-{
-	public static void main (String [] args) 
-	{
+public class Ex1_4 {
+	public static void main (String [] args) {
 		double num1, num2, num3; 
 		
 		num1 = 1.25;

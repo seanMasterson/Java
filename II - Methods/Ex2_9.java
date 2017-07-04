@@ -1,7 +1,5 @@
-public class Ex2_9 
-{
-	public static void main(String [] args) 
-	{
+public class Ex2_9 {
+	public static void main(String [] args) {
 		Ex2_9 n0 = new Ex2_9();
 		
 		double tempC = 45.3;
@@ -14,14 +12,12 @@ public class Ex2_9
 		System.out.printf("%.2f degrees Celsius is equal to %.2f degrees Fahrenheit.\n", tempC, answerF);
 	}
 	
-	public double convertToCelsius(double temperature) 
-	{
+	public double convertToCelsius(double temperature) {
 		double conversion = (5.0 / 9.0) * (temperature - 32.0);
 		return conversion;
 	}
 	
-	public double convertToFahrenheit(double temperature) 
-	{
+	public double convertToFahrenheit(double temperature) {
 		double conversion = ((9.0 / 5.0) * temperature) + 32.0;
 		return conversion;
 	}

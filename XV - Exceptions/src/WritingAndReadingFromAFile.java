@@ -19,7 +19,7 @@ public class WritingAndReadingFromAFile
 			p.println("Hello");
 			p.println("It is Thursday.");
 			p.println("Today, a young man on acid realised that all matter is merely energy condensed to a slow vibration.");
-			p.flush();
+			//p.flush();
 			p.close();
 		} 
 		catch (FileNotFoundException e) 
@@ -42,7 +42,7 @@ public class WritingAndReadingFromAFile
 			}
 			b0.close();
 		}
-		/* FileNotFoundException may be thrown from a creating a FileRedaer object if it
+		/* FileNotFoundException may be thrown from creating a FileReader object if it
 		 * cannot be found.*/
 		catch(FileNotFoundException e) 
 		{

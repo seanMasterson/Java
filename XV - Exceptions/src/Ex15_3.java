@@ -1,9 +1,6 @@
-public class Ex15_3 
-{
-	public static void main(String[] args) 
-	{
-		try 
-		{
+public class Ex15_3 {
+	public static void main(String[] args) {
+		try {
 			Weekday w0 = new Weekday("Monday");
 			System.out.println(w0.toString());
 			
@@ -11,8 +8,7 @@ public class Ex15_3
 			System.out.println(w1.toString());
 			
 		}
-		catch (InvalidWeekdayException w) 
-		{
+		catch (InvalidWeekdayException w) {
 			System.out.println(w.getMessage());
 			w.printStackTrace();
 		}

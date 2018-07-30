@@ -73,7 +73,7 @@ public class Ex4_13
 		int total = 0;
 		int sumTotalProduct = 0;
 		
-		for (int i = 0; i < 5; i++) 
+		for(int i = 0; i < 5; i++) 
 		{
 			total = sales[0][i] + sales[1][i] + sales[2][i] + sales[3][i];
 			sumTotalProduct += total;
